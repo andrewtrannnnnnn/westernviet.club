@@ -1,12 +1,14 @@
 import { defineConfig } from "vite";
-import reactPlugin from "@vitejs/plugin-react";
 import legacyPlugin from "@vitejs/plugin-legacy";
+import reactPlugin from "@vitejs/plugin-react";
+import tailwindPlugin from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
-    reactPlugin(),
     legacyPlugin({
       targets: ["defaults", "not IE 11"],
     }),
+    reactPlugin(),
+    tailwindPlugin(),
   ],
 });
