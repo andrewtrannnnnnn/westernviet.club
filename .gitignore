@@ -1,6 +1,12 @@
 # Dependencies directory
 node_modules
 
+# TypeScript build output
+dist
+
+# Vite files
+.vite
+
 # Dotenv environment variable files
 .env
 .env.*
