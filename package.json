@@ -1,0 +1,20 @@
+{
+  "name": "westernviet.club",
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write"
+  },
+  "repository": "https://github.com/andrewtrannnnnnn/westernviet.club.git",
+  "author": "Andrew Tran <andrewtrann233@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}
