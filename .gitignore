@@ -1,0 +1,10 @@
+# Dependencies directory
+node_modules
+
+# Dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# JetBrains project-specific settings
+.idea
