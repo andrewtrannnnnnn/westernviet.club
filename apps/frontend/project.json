@@ -1,5 +1,5 @@
 {
-  "name": "westernviet.club-client",
+  "name": "westernviet.club-frontend",
   "sourceRoot": "apps/frontend/src",
   "projectType": "application",
   "targets": {
@@ -7,20 +7,20 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "westernviet.club-client:build"
+        "buildTarget": "westernviet.club-frontend:build"
       }
     },
     "build": {
       "executor": "@nx/vite:build",
       "options": {
-        "outputPath": "dist/westernviet.club-client"
+        "outputPath": "dist/westernviet.club-frontend"
       }
     },
     "preview": {
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "westernviet.club-client:build"
+        "buildTarget": "westernviet.club-frontend:build"
       }
     }
   }
