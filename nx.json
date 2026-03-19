@@ -1,5 +1,5 @@
 {
-  "defaultProject": "westernviet.club-client",
+  "defaultProject": "westernviet.club-frontend",
   "targetDefaults": {
     "build": {
       "dependsOn": [
