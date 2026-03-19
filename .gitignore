@@ -1,0 +1,13 @@
+# JetBrains IDE configuration
+.idea
+
+# Dependencies directory
+node_modules
+
+# Dotenv envrionment variable files
+.env
+.env.*
+!.env.example
+
+# Nx cache
+.nx
