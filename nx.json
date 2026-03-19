@@ -1,0 +1,20 @@
+{
+  "defaultProject": "westernviet.club-client",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/*.(test|spec).jsx?"
+    ]
+  },
+  "analytics": false
+}
