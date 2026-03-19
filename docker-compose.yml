@@ -1,0 +1,10 @@
+# todo: fix unpublished port
+services:
+  frontend:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
