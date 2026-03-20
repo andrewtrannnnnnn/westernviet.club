@@ -16,5 +16,5 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": ["vite-env-override.d.ts", "src"]
+  "include": ["src"]
 }
