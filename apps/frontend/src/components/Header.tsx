@@ -1,28 +1,19 @@
+import { ComponentProps } from "react";
 import { Link } from "react-router";
-import { ReactComponent as Logo } from "../assets/VSA.svg";
 import "./Header.css";
+import Logo from "../assets/Logo.svg";
 
-const routes = [
-  { path: "/a", label: "a" },
-  { path: "/b", label: "b" },
-  { path: "/c", label: "c" },
-];
+interface HeaderProps extends ComponentProps<"header"> {}
 
-export default function Header() {
+export default function Header({ ...props }: HeaderProps) {
   return (
-    <header className="header">
+    <header className="header" {...props}>
       <nav className="header__nav">
-        <Link to="/" className="header__link--logo">
-          <img src={Logo} className="header__logo" alt="" />
+        <Link to="/" className="header__link">
+          <img src={Logo} alt="" />
         </Link>
         <ul className="header__list">
-          {routes.map((route, index) => (
-            <li key={index} className="header__item">
-              <Link to={route.path} className="header__link">
-                {route.label}
-              </Link>
-            </li>
-          ))}
+
         </ul>
       </nav>
     </header>
