@@ -1,19 +1,27 @@
-import { ComponentProps } from "react";
-import { Link } from "react-router";
-import "./Header.css";
-import Logo from "../assets/Logo.svg";
+import { useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
+import "./Header.scss";
 
-interface HeaderProps extends ComponentProps<"header"> {}
+export default function Header({ ...props }) {
+  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
 
-export default function Header({ ...props }: HeaderProps) {
+  function handleClick() {
+    setMenuIsOpen((previousState) => !previousState);
+  }
+
   return (
     <header className="header" {...props}>
       <nav className="header__nav">
-        <Link to="/" className="header__link">
-          <img src={Logo} alt="" />
-        </Link>
-        <ul className="header__list">
+        {menuIsOpen ? (
+          <MdClose onClick={handleClick} className="header__menu-icon--close" />
+        ) : (
+          <MdMenu onClick={handleClick} className="header__menu-icon" />
+        )}
 
+        <ul className="header__list">
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
         </ul>
       </nav>
     </header>

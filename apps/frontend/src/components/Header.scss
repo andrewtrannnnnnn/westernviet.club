@@ -1,0 +1,41 @@
+.header {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+
+  &__nav {
+    grid-column: 2;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+  }
+
+  &__menu-icon {
+    visibility: hidden;
+
+    &--close {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    display: grid;
+
+    &__nav {
+
+    }
+
+    &__menu-icon {
+      visibility: visible;
+
+      &--close {
+        visibility: visible;
+      }
+    }
+  }
+}
